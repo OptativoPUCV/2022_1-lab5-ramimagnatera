@@ -70,3 +70,22 @@ treemap.c:105:36: error: ‘TreeNode {aka struct TreeNode}’ has no member name
 cc1: all warnings being treated as errors
 Compilation failed
 3e5838d
+Sun Apr 24 23:31:37 UTC 2022: 
+ treemap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:54:6: error: expected ‘(’ before ‘tree’
+   if tree->root == NULL{
+      ^~~~
+treemap.c:54:10: error: statement with no effect [-Werror=unused-value]
+   if tree->root == NULL{
+      ~~~~^~~~~~
+treemap.c: In function ‘removeNode’:
+treemap.c:107:36: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘rigth’; did you mean ‘right’?
+         node->parent->left = node->rigth;
+                                    ^~~~~
+                                    right
+cc1: all warnings being treated as errors
+Compilation failed
+44127a6
