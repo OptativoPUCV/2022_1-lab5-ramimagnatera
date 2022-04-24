@@ -51,7 +51,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
   
   TreeNode* aux = tree->root;
   
-  if tree->root == NULL{
+  if(tree->root == NULL){
     aux = createTreeNode(key,value);
     tree->root = nodo;
     tree->current = nodo;
@@ -104,7 +104,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       }
       else if(node->right!=NULL){
         node->right->parent = node->parent;
-        node->parent->left = node->rigth;
+        node->parent->left = node->right;
         node=NULL;        
       }
       else{

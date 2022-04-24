@@ -89,3 +89,14 @@ treemap.c:107:36: error: ‘TreeNode {aka struct TreeNode}’ has no member name
 cc1: all warnings being treated as errors
 Compilation failed
 44127a6
+Sun Apr 24 23:32:38 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:56:18: error: ‘nodo’ undeclared (first use in this function)
+     tree->root = nodo;
+                  ^~~~
+treemap.c:56:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+5448097
