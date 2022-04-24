@@ -24,3 +24,49 @@ Sat Apr 23 22:53:33 UTC 2022:
  tests:  4|7
 total_score: 5/70
 3b65e14
+Sun Apr 24 21:42:39 UTC 2022: 
+ treemap.c | 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 60 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:51:19: error: invalid initializer
+   TreeNode nodo = createTreeNode(key,value);
+                   ^~~~~~~~~~~~~~
+treemap.c:52:18: error: invalid initializer
+   TreeNode aux = tree->root;
+                  ^~~~
+treemap.c:54:6: error: expected ‘(’ before ‘tree’
+   if tree->root == NULL{
+      ^~~~
+treemap.c:54:10: error: statement with no effect [-Werror=unused-value]
+   if tree->root == NULL{
+      ~~~~^~~~~~
+treemap.c:73:9: error: invalid operands to binary == (have ‘TreeNode {aka struct TreeNode}’ and ‘void *’)
+   if(aux==NULL){
+         ^~
+treemap.c:74:8: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+     aux->parent = tree->current->parent;
+        ^~
+treemap.c:75:32: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+     if(tree->lower_than(key,aux->parent->pair->key) == 1){
+                                ^~
+treemap.c:76:10: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       aux->parent->left = aux;
+          ^~
+treemap.c:79:10: error: invalid type argument of ‘->’ (have ‘TreeNode {aka struct TreeNode}’)
+       aux->parent->right = aux;
+          ^~
+treemap.c:82:19: error: incompatible types when assigning to type ‘TreeNode * {aka struct TreeNode *}’ from type ‘TreeNode {aka struct TreeNode}’
+     tree->current = aux;
+                   ^
+treemap.c:51:12: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   TreeNode nodo = createTreeNode(key,value);
+            ^~~~
+treemap.c: In function ‘removeNode’:
+treemap.c:105:36: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘rigth’; did you mean ‘right’?
+         node->parent->left = node->rigth;
+                                    ^~~~~
+                                    right
+cc1: all warnings being treated as errors
+Compilation failed
+3e5838d
