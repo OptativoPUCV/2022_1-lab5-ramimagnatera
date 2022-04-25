@@ -169,5 +169,5 @@ Pair * nextTreeMap(TreeMap * tree) {
 
   
   
-  return aux->parent->pair;
+  return aux->right->pair;
 }
