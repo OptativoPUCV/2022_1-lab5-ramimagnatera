@@ -321,3 +321,21 @@ Mon Apr 25 02:04:08 UTC 2022:
  tests:  16|4
 total_score: 30/70
 e21638d
+Mon Apr 25 02:20:58 UTC 2022: 
+ treemap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:169:20: error: expected expression before ‘<’ token
+   if(tree->current-<right != NULL){
+                    ^
+treemap.c:177:15: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘current’; did you mean ‘parent’?
+   return aux->current->pair;
+               ^~~~~~~
+               parent
+treemap.c:178:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+b8c3e9c
