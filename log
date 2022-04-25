@@ -360,3 +360,20 @@ Mon Apr 25 02:23:22 UTC 2022:
  tests:  17|4
 total_score: 30/70
 9b67f39
+Mon Apr 25 02:33:58 UTC 2022: 
+ treemap.c | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:175:71: error: expected ‘)’ before ‘{’ token
+     if((tree->lower_than(aux->parent->pair->key, aux->pair->key) == 1){
+                                                                       ^
+treemap.c:182:3: error: expected expression before ‘}’ token
+   }
+   ^
+treemap.c:183:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+afe6439
