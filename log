@@ -203,3 +203,17 @@ Mon Apr 25 01:04:14 UTC 2022:
  tests:  5|6
 total_score: 5/70
 6e29164
+Mon Apr 25 01:20:02 UTC 2022: 
+ treemap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:138:11: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(aux->key == key) return aux;
+           ^~
+treemap.c:138:32: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     if(aux->key == key) return aux;
+                                ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+79b4be4
