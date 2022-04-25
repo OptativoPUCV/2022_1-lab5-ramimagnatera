@@ -137,6 +137,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode* aux = tree->root;
   
   while(aux!=NULL){
+    tree->current = aux;
     if(is_equal(tree,key,aux->pair->key) == 1) return aux->pair;
     
     if(tree->lower_than(key, aux->pair->key) == 1){
