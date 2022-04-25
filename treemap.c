@@ -58,20 +58,23 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
   } 
   
   while(aux->left != NULL && aux->right != NULL){
+    tree->current = aux;
+    
     if(tree->lower_than(key, aux->pair->key) == 1){
       aux = aux->left;
     }
     else if(tree->lower_than(key, aux->pair->key) == 0){
       aux = aux->right;
     }
+    
   }
   
-  tree->current = aux;
+  /*tree->current = aux;
   
   if(tree->root != NULL){
     aux = createTreeNode(key,value);
     aux->parent = tree->current;
-    if(tree->lower_than(key,aux->pair->key) == 0){
+    if(tree->lower_than(key,aux->pair->key) == 1){
       aux->left = aux;
     }
     else{
@@ -79,6 +82,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
     }
     tree->current = aux;
   }
+  */
 }
 
 TreeNode * minimum(TreeNode * x){
