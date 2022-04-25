@@ -179,4 +179,5 @@ Pair * nextTreeMap(TreeMap * tree) {
       return aux->pair;
     }
   }  
+  return NULL;
 }
