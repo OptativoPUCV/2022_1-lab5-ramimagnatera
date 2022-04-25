@@ -339,3 +339,18 @@ treemap.c:178:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 b8c3e9c
+Mon Apr 25 02:22:56 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:177:15: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘current’; did you mean ‘parent’?
+   return aux->current->pair;
+               ^~~~~~~
+               parent
+treemap.c:178:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+f4fccc3
