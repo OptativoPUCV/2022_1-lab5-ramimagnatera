@@ -72,10 +72,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
     }
   }
   
-  
   if(tree->root != NULL){
-    aux = createTreeNode(key,value);
-    aux->parent = tree->current;
+
     if(tree->lower_than(key,aux->pair->key) == 1){
       aux->left = aux;
     }
@@ -84,6 +82,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
     }
     tree->current = aux;
   }
+  aux = createTreeNode(key,value);
+  aux->parent = tree->current;
   
 }
 
@@ -105,16 +105,16 @@ void removeNode(TreeMap * tree, TreeNode* node){
       if(node->left!=NULL){
         node->left->parent = node->parent;
         node->parent->left = node->left;
-        free(node);
+        node=NULL;
       }
       else if(node->right!=NULL){
         node->right->parent = node->parent;
         node->parent->left = node->right;
-        free(node);        
+        node=NULL;        
       }
       else{
         node->parent->left=node->left;
-        free(node);
+        node=NULL;
       }  
     }
     else{
@@ -123,7 +123,6 @@ void removeNode(TreeMap * tree, TreeNode* node){
       node->parent->left = hijo;
       hijo->parent = node->parent;
       hijo->right=node->right;
-      free(node);
     }
   }
 }
