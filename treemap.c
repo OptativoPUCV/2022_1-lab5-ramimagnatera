@@ -90,7 +90,7 @@ TreeNode * minimum(TreeNode * x){
   while(x->left != NULL){
     x = x->left;
   }
-  return x->parent;
+  return x;
 }
 
 void removeNode(TreeMap * tree, TreeNode* node) {
