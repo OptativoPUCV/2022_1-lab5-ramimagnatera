@@ -145,3 +145,15 @@ Mon Apr 25 00:44:43 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 c2d03c5
+Mon Apr 25 00:49:07 UTC 2022: 
+ treemap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:78:5: error: ‘ree’ undeclared (first use in this function); did you mean ‘tree’?
+     ree->current = aux;
+     ^~~
+     tree
+treemap.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9e56a54
