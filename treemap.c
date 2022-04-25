@@ -122,7 +122,6 @@ void removeNode(TreeMap * tree, TreeNode* node){
       hijo->right=node->right;
     }
   }
-  
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -175,11 +174,11 @@ Pair * nextTreeMap(TreeMap * tree){
   while(aux!=NULL){
     if((tree->lower_than(aux->parent->pair->key, aux->pair->key) == 1)){
       aux = aux->parent;
+      if(aux==NULL) return NULL;
     }
     else{
       tree->current = aux;
       return aux->pair;
     }
   }
-  return NULL;
 }
