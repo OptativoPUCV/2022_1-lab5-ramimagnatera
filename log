@@ -475,3 +475,23 @@ Mon Apr 25 03:04:26 UTC 2022:
  1 file changed, 1 insertion(+)
  tests:  0|0
 1b290dd
+Mon Apr 25 03:04:52 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:169:36: error: expected ‘)’ before ‘{’ token
+   if((tree->current->right != NULL){
+                                    ^
+treemap.c:183:1: error: expected expression before ‘}’ token
+ }
+ ^
+treemap.c:168:14: error: unused variable ‘aux’ [-Werror=unused-variable]
+   TreeNode * aux = tree->current;
+              ^~~
+treemap.c:183:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+6a9b2dc
