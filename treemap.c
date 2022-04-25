@@ -165,5 +165,9 @@ Pair * firstTreeMap(TreeMap * tree){
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+  TreeNode * aux = tree->current;
+
+  
+  
+  return aux->parent->pair;
 }
