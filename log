@@ -546,3 +546,9 @@ treemap.c:167:8: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 390e789
+Mon Apr 25 03:33:15 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|4
+total_score: 30/70
+bb2941c
