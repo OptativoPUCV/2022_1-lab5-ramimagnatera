@@ -123,6 +123,7 @@ void removeNode(TreeMap * tree, TreeNode* node){
       node->parent->left = hijo;
       hijo->parent = node->parent;
       hijo->right=node->right;
+      free(node);
     }
   }
 }
